@@ -1,0 +1,106 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "GymLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/GymLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GymLibrary.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "GymLibrary/1.0.0": {
+      "type": "project",
+      "path": "../GymLibrary/GymLibrary.csproj",
+      "msbuildProject": "../GymLibrary/GymLibrary.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "GymLibrary >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Mark Sadnik\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Mark Sadnik\\Documents\\GitHub\\Pokazi_kaj_znas_SMV\\Pokazi_kaj_znas_WINFORMS\\Pokazi_kaj_znas_WINFORMS\\Pokazi_kaj_znas_WINFORMS.csproj",
+      "projectName": "Pokazi_kaj_znas_WINFORMS",
+      "projectPath": "C:\\Users\\Mark Sadnik\\Documents\\GitHub\\Pokazi_kaj_znas_SMV\\Pokazi_kaj_znas_WINFORMS\\Pokazi_kaj_znas_WINFORMS\\Pokazi_kaj_znas_WINFORMS.csproj",
+      "packagesPath": "C:\\Users\\Mark Sadnik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mark Sadnik\\Documents\\GitHub\\Pokazi_kaj_znas_SMV\\Pokazi_kaj_znas_WINFORMS\\Pokazi_kaj_znas_WINFORMS\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Mark Sadnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "C:\\Users\\Mark Sadnik\\Documents\\GitHub\\Pokazi_kaj_znas_SMV\\Pokazi_kaj_znas_WINFORMS\\GymLibrary\\GymLibrary.csproj": {
+              "projectPath": "C:\\Users\\Mark Sadnik\\Documents\\GitHub\\Pokazi_kaj_znas_SMV\\Pokazi_kaj_znas_WINFORMS\\GymLibrary\\GymLibrary.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

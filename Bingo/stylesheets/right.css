@@ -1,0 +1,81 @@
+/*RIGHT*/
+
+.right{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+}
+
+.numberTitleWrap{
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    font-family: 'Kanit', sans-serif;
+    margin-bottom: 10px;
+}
+
+#selectedNumber{
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.allCardsWrap{
+    display: grid;
+    justify-content: center;
+}
+
+.card{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.cardRow{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    height: 30px;
+}
+
+.cardTable{
+    margin-bottom: 10px;
+    text-align: center;
+    width: auto;
+    border-spacing: 0;
+    border: 1px solid black;
+}
+
+.cardTable:hover{
+    background-color: rgb(210, 210, 210);
+}
+
+.cardName{
+    width: 100%;
+    text-align: right;
+}
+
+.cardNum{
+    border: 1px solid black;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.cardNumInner{
+    display: block;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 13px;
+    width: 90%;
+    height: 90%;
+    line-height: 25px;
+    text-align: center;
+}
+
+.generatedSelect, #generatedSelect{
+    border: 2px solid rgb(255, 94, 0);
+}
+
+/*RIGHT*/

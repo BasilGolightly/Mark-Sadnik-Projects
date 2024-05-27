@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Pokazi_kaj_znas_WINFORMS/1.0.0": {
+        "dependencies": {
+          "GymLibrary": "1.0.0"
+        },
+        "runtime": {
+          "Pokazi_kaj_znas_WINFORMS.dll": {}
+        }
+      },
+      "GymLibrary/1.0.0": {
+        "runtime": {
+          "GymLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Pokazi_kaj_znas_WINFORMS/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GymLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

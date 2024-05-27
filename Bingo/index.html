@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tombola</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/left.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/right.css">
+</head>
+
+<body>
+
+    <!--NAV-->
+    <div class="top">
+        <div class="topLeft">
+            <div>
+                <img src="files/bingo_icon.png" class="bingoImg">
+            </div>
+            <div>
+                B I N G O 
+            </div>
+            <div>
+                <button class="helpBtn" onclick="navodilaToggle()"></button>
+            </div>
+        </div>
+        <div class="topRight">
+            <div class="musicWrap">
+                <div class="musicBackWrap" id="backWrap">
+                    <button class="MusicBtnBack MusicBtn" onclick="songBack()"></button>
+                </div>
+
+                <div class="musicTitleWrap" id="musicTitle">
+                    Track 1
+                </div>
+
+                <div class="musicPlayWrap" id="playWrap">
+                    <button class="MusicPlayBtn MusicBtn" onclick="songPlay()"></button>
+                </div>
+
+                <div class="musicStopWrap" id="stopWrap">
+                    <button class="MusicStopBtn MusicBtn" onclick="songStop()"></button>
+                </div>
+
+                <div class="musicNextWrap" id="fwdWrap">
+                    <button class="MusicBtnFwd MusicBtn" onclick="songForward()"></button>
+                </div>
+
+                <div class="audioWrap">
+                    <audio class="audioPlayer" id="audio1" src="files/BEAT2.mp3"></audio>
+                    <audio class="audioPlayer" id="audio2" src="files/BEAT1.mp3"></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--NAV-->
+
+    <!--CONTENT-->
+    <div class="main">
+
+        <div class="mainInner">
+            <!--STATS, PLAYING FIELD-->
+            <div class="left">
+                
+                <!--STATS-->
+                <div class="statsWrap">
+                    <div class="WheelIconWrap">
+                        <img src="files/wheel_icon.png" class="WheelIconImg">
+                    </div>
+                    
+                    <div class="statsRight">
+                        <table class="statsTable">
+                            <tr class="statsRow">
+                                <td><b>Št. vrstic:</b></td>
+                                <td style="text-align: right;">
+                                    <select class="rowSelection" id="numRows" oninput="generirajKarte()">
+                                        <option value="3">3 vrstice</option>
+                                        <option value="4">4 vrstice</option>
+                                        <option value="5">5 vrstic</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr class="statsRow">
+                                <td><b>Čas igranja:</b></td>
+                                <td style="text-align: right;">
+                                    <span id="timerOutput">00 : 00</span>
+                                </td>
+                            </tr>
+
+                            <tr class="statsRow">
+                                <td colspan="2">
+                                    <button class="startBtn gameBtn" id="startBtn" onclick="startGame()">Start</button> 
+                                    <button class="stopBtn gameBtn" id="resetBtn" onclick="resetGame()">Reset</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="statsDisplayWrap">
+                        <div class="gameStatusDisplay">
+                            <span id="gameStatus">ZAČNI IGRO</span>
+                        </div>
+                        <div class="gameFlowBtnWrap">
+                            <div class="bingoWrap">
+                                <button class="bingoBtn" id="bingoBtn" onclick="preveriZmago()" disabled>B I N G O</button>
+                            </div>
+                            <div class="rerollWrap">
+                                <button class="rerollBtn" id="rerollBtn" onclick="naslednjaStevilka()" disabled></button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!--STATS-->
+
+                <!--PLAYING FIELD-->
+                <div class="playWrap">
+                    <div class="playInner" id="playingField">
+                        <div class="leftPlayWrap">
+                            <div class="leftTitle">
+                                <div id="computerLoading">
+                                    <img src="files/loading.gif" class="loadingImg">
+                                </div>
+                                <div class="playTitleText">
+                                    Računalnik 
+                                </div>
+                            </div>
+
+                            <div class="computerCardWrap">
+                                <table class="computerCard" id="computerCard">
+                                    <!--
+                                    <tr class="playRow">
+                                        <td class="playNum"><button class="computerNumInner ">R</button></td>
+                                        <td class="playNum"><button class="computerNumInner computerCircle">I</button></td>
+                                        <td class="playNum"><button class="computerNumInner ">V</button></td>
+                                        <td class="playNum"><button class="computerNumInner computerCircle">A</button></td>
+                                        <td class="playNum"><button class="computerNumInner ">L</button></td>
+                                    </tr>
+                                    -->
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="rightPlayWrap">
+                            <div class="rightTitle">
+                                <div id="playerLoading">
+                                    <img src="files/loading.gif" class="loadingImg">
+                                </div>
+                                <div class="playTitleText">
+                                    Igralec <i>(vi)</i>
+                                </div>
+                                
+                            </div>
+                            <div class="playerCardWrap">
+                                <table class="playerCard" id="playerCard">
+                                    <!--
+                                    <tr class="playRow">
+                                        <td class="playNum"><button class="playNumInner playerCircle">B</button></td>
+                                        <td class="playNum"><button class="playNumInner ">I</button></td>
+                                        <td class="playNum"><button class="playNumInner playerCircle">N</button></td>
+                                        <td class="playNum"><button class="playNumInner ">G</button></td>
+                                        <td class="playNum"><button class="playNumInner playerCircle">O</button></td>
+                                    </tr>
+                                    --> 
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--NAVODILA-->
+                    <div class="helpWrap" id="help">
+                        <div class="helpInner">
+                            <h1 class="helpTitle">Navodila</h1>
+                            
+                            <br>
+
+                            <p class="helpText">
+                                Najprej novo igro požene igralec s klikom na gumb "Start".<br>
+                                Igralec si nato izbere eno izmed igralnih kart na desni strani ekrana, računalnik pa zatem naključno izbere eno od preostalih kart.<br/>
+                                Potem se izžreba naključno število od 1 do 75 (oz. 80, če igrate na način s 4 vrsticami)<br>
+                                Če se izžrebana številka pojavi na vaši karti, jo označite.<br> 
+                                Nepravilne označitve (goljufanje) <b>NISO DOVOLJENJE</b>.<br>
+                                Če se pa izžrebana številka ne pojavi na vaši karti, ponovno izžrebajte (zraven BINGO tipke)<br> 
+                                Ko imate označeno celo vrsto, stolpec ali pa diagonalo, pritisnite 'B I N G O' tipko - <b>zmaga</b>.<br> 
+                                Predčasen pritisk na bingo <b>NI DOVOLJEN</b>.<br>
+                                Če računalnik prvi dobi celo vrsto, vrstico ali diagonalo, bo takoj poklical BINGO - <b>zguba</b>.<br>
+                                Za predčasen konec igre lahko pritisnete "Reset" tipko.<br>
+                                <br>
+                                <b>SREČNO!!!</b><br>
+                                Mark Sadnik, R4B
+                            </p> 
+                        
+                        </div>
+                    </div>
+                    <!--NAVODILA-->
+                </div>
+                <!--PLAYING FIELD-->
+
+            </div>
+            <!--STATS, PLAYING FIELD-->
+
+            <!--SELECTION, NUMBER DISPLAY-->
+            <div class="right">
+                <div class="numberTitleWrap">
+                    Številka: <span id="selectedNumber">--</span>
+                </div>
+
+                <div class="allCardsWrap" id="generateCardOutput">
+
+                    <div class="card" onclick="izberiKarto(1)">
+                        <table class="cardTable">
+                            <!--
+                            <tr class="cardRow">
+                                <td class="cardNum"><span class="cardNumInner generatedSelect">12</span></td>
+                                <td class="cardNum"><span class="cardNumInner generatedSelect">1</span></td>
+                                <td class="cardNum"><span class="cardNumInner">1</span></td>
+                                <td class="cardNum"><span class="cardNumInner">1</span></td>
+                                <td class="cardNum"><span class="cardNumInner">1</span></td>
+                            </tr>
+                            -->
+                        </table>
+                        <div class="cardName">
+                            <span id="generatedCardOrder">1</span>. Karta
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--SELECTION, NUMBER DISPLAY-->
+        </div>
+        
+    </div>
+    <!--CONTENT-->
+</body>
+
+<script src="scripts/script.js"></script>
+<script src="scripts/music.js"></script>
+<script>
+    generirajKarte();
+</script>
+
+</html>

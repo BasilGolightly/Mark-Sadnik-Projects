@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokazi_kaj_znas_WINFORMS", "Pokazi_kaj_znas_WINFORMS\Pokazi_kaj_znas_WINFORMS.csproj", "{97EDCA59-8998-44CB-B09F-03C2D9624AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymLibrary", "GymLibrary\GymLibrary.csproj", "{260D9B13-E1DB-4ADE-B6E7-2D2095517903}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97EDCA59-8998-44CB-B09F-03C2D9624AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97EDCA59-8998-44CB-B09F-03C2D9624AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97EDCA59-8998-44CB-B09F-03C2D9624AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97EDCA59-8998-44CB-B09F-03C2D9624AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{260D9B13-E1DB-4ADE-B6E7-2D2095517903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{260D9B13-E1DB-4ADE-B6E7-2D2095517903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{260D9B13-E1DB-4ADE-B6E7-2D2095517903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{260D9B13-E1DB-4ADE-B6E7-2D2095517903}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F85A13F5-EDFD-48A3-8D6B-8BB576C1902F}
+	EndGlobalSection
+EndGlobal

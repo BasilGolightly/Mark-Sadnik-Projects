@@ -1,0 +1,24 @@
+C:\Users\Mark Sadnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\bin\Debug\net8.0-windows\GymLibrary.deps.json
+C:\Users\Mark Sadnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\bin\Debug\net8.0-windows\GymLibrary.dll
+C:\Users\Mark Sadnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\bin\Debug\net8.0-windows\GymLibrary.pdb
+C:\Users\Mark Sadnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\GymLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mark Sadnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\GymLibrary.AssemblyInfoInputs.cache
+C:\Users\Mark Sadnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\GymLibrary.AssemblyInfo.cs
+C:\Users\Mark Sadnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\GymLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Mark Sadnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\GymLibrary.sourcelink.json
+C:\Users\Mark Sadnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\GymLibrary.dll
+C:\Users\Mark Sadnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\refint\GymLibrary.dll
+C:\Users\Mark Sadnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\GymLibrary.pdb
+C:\Users\Mark Sadnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\ref\GymLibrary.dll
+C:\Users\uporabnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\bin\Debug\net8.0-windows\GymLibrary.deps.json
+C:\Users\uporabnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\bin\Debug\net8.0-windows\GymLibrary.dll
+C:\Users\uporabnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\bin\Debug\net8.0-windows\GymLibrary.pdb
+C:\Users\uporabnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\GymLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\uporabnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\GymLibrary.AssemblyInfoInputs.cache
+C:\Users\uporabnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\GymLibrary.AssemblyInfo.cs
+C:\Users\uporabnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\GymLibrary.csproj.CoreCompileInputs.cache
+C:\Users\uporabnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\GymLibrary.sourcelink.json
+C:\Users\uporabnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\GymLibrary.dll
+C:\Users\uporabnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\refint\GymLibrary.dll
+C:\Users\uporabnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\GymLibrary.pdb
+C:\Users\uporabnik\Documents\GitHub\Pokazi_kaj_znas_SMV\Pokazi_kaj_znas_WINFORMS\GymLibrary\obj\Debug\net8.0-windows\ref\GymLibrary.dll

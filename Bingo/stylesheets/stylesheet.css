@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    /*overflow-y: hidden;*/
+}
+
+/*------------------TOP------------------*/
+
+.top{
+    /*display: grid;
+    grid-template-columns: auto auto;*/
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    padding: 15px;
+    background-color: rgb(210, 210, 210);
+}
+
+.topLeft{
+    display: flex;
+    flex-direction: row;
+    flex: 50%;
+    text-align: left;
+    justify-content: left;
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+}
+
+.topLeft > div{
+    margin-right: 5px;
+}
+
+.bingoImg{
+    width: 30px;
+    height: 30px;
+}
+
+.topRight{
+    flex: 50%;
+    text-align: right;
+    justify-content: right;
+}
+
+.musicWrap{
+    justify-content: right;
+    display: flex;
+    flex-direction: row;
+}
+
+.musicWrap > div{
+    margin-left: 2.5px;
+} 
+
+.MusicBtn{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    border-radius: 30px;
+}
+
+.MusicBtn:hover{
+    background-color: rgb(190, 190, 190);
+}
+
+.MusicBtnBack{
+    background-image: url("../files/back_btn.png");
+    background-size: cover;
+}
+
+.musicTitleWrap{
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.MusicBtnFwd{
+    background-image: url("../files/skip_icon.png");
+    background-size: cover;
+}
+
+.MusicPlayBtn{
+    background-image: url("../files/play_icon.png");
+    background-size: cover;
+}
+
+.MusicStopBtn{
+    background-image: url("../files/stop_icon.png");
+    background-size: cover;
+}
+
+.helpBtn{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 0;
+    background-image: url("../files/help_icon.png");
+    background-size: cover;
+    /*margin-top: 5px;*/
+}
+
+.helpBtn:hover{
+    background-color: rgb(190, 190, 190);
+}
+
+/*AUDIO*/
+
+.audioWrap{
+    display: none;
+}
+
+/*AUDIO*/
+
+/*------------------TOP------------------*/
+
+/*------------------CONTENT--------------*/
+
+.main{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.mainInner{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    width: 1250px;
+    border-radius: 10px;
+    /*padding: 15px;*/
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 75%;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 2px solid black;
+    height: auto;
+}
+
+.right{
+    flex: 25%;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 2px solid black;
+}
+
+/*------------------CONTENT--------------*/
+
