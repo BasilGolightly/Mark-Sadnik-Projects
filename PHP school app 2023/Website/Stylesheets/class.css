@@ -1,0 +1,145 @@
+.bannerr {
+    width: 100%;
+    height: 963px;
+}
+
+.slikica {
+    width: 450px;
+    height: 149px;
+}
+
+.slikicaDIV {
+    width: 450px;
+    height: 149px;
+    transform: translate(133%, -149px);
+}
+
+.Predmeti {
+    position: relative;
+    top: 10%;
+    font-size: 1.25vw;
+    width: 100%;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 1vw;
+    text-decoration: none;
+
+}
+
+.miza {
+    padding: 1vw;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.HrefPredmetMain {
+    position: relative;
+    text-decoration: none;
+    color: grey;
+}
+
+.HrefPredmetMain:link {
+    text-decoration: none;
+    color: grey;
+}
+
+.HrefPredmetMain:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.HrefPredmetMain:after {
+    content: "";
+    position: absolute;
+    background-color: palevioletred;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.HrefPredmetMain:hover:after {
+    width: 100%;
+}
+
+.container {
+    margin: auto;
+    position: relative;
+    margin-top: 0.25vw;
+    /*top: 10px;*/
+    width: 70%;
+}
+
+.plusek,
+.minusek {
+    border: 1px solid black;
+    border-radius: 0.5vw;
+    /*margin-top: 0.5vw;*/
+    font-size: 1.5vw;
+    padding: 0.2vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.plusek:hover {
+    background-color: green;
+}
+
+.minusek:hover {
+    background-color: red;
+    text-decoration: none;
+}
+
+.kontainer {
+    display: grid;
+    grid-template-columns: auto 3vw 3vw;
+    grid-template-rows: auto;
+    /*width: 0%;*/
+    /*padding-bottom: 10px;*/
+}
+
+.kontainer>div {
+    margin: 0.5vw;
+}
+
+.title {
+    font-size: 1.5vw;
+    margin-top: 0.35vw;
+}
+
+.kontainer a {
+    color: black;
+    text-decoration: none;
+}
+
+.trashIcon {
+    width: 1vw;
+    height: 1vw;
+    transform: translate(10px, 2px);
+}
+
+.edit {
+    width: 30px;
+    height: 30px;
+}
+
+.arrow_img {
+    width: 0.75vw;
+    height: 0.75vw;
+}
+
+.btn {
+    font-size: 1.5vw;
+    border: none;
+    background-color: white;
+}
+
+.btn:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,191 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    background-image: url(../Pictures/science_pattern.jpg);
+    backdrop-filter: blur(12px);
+    /*SOURCE: https://www.freepik.com/free-vector/hand-drawn-scientific-formulas-chalkboard_10750708.htm#query=science%20pattern&position=0&from_view=keyword&track=ais*/
+    background-size: cover;
+}
+
+.main{
+    width: 30vw;
+    height: 75vh;
+    margin: 15vh 25vw;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 20% 50% 30%;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logo{
+    width: 15vw;
+    object-fit: cover;
+}
+
+.middle{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto auto auto auto auto;
+}
+
+.middle > div, .top{
+    text-align: left;
+    display: grid;
+    justify-content: center;
+}
+
+.title{
+    font-size: 1.15vw;
+}
+
+.text_field{
+    background-color: rgba(25,26,47,0);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    width: 15vw;
+}
+
+.star{
+    font-size: 0.9vw;
+    color: red;
+    vertical-align: super;
+}
+
+.star_blue{
+    font-size: 0.9vw;
+    color: lightblue;
+    vertical-align: super;
+}
+
+.file_upload::file-selector-button{
+    color: rgba(25,26,47,0);
+    background-color: rgba(25,26,47,0);
+    background-image: url("../Pictures/camera_icon.png");
+    background-size: cover;
+    height: 3.5vw;
+    width: 3.5vw;
+    outline: none;
+    border: 0.1vw solid white;
+    border-radius: 1vw;
+    font-size: 0.75vw;
+}
+
+.file_upload::file-selector-button:hover{
+    background-color: rgb(25,26,47);
+    border: 0.2vw solid white;
+}
+
+.picture{
+    width: 17vw;
+    max-width: 17vw;
+}
+
+.picture, .pic_inner{
+    display: grid;
+    justify-content: center;
+    text-align: left;
+}
+
+.bottom{
+    display: grid;
+    min-width: 30vw;
+    height: auto;
+    justify-content: center;
+    grid-template-rows: 15% 30% auto;
+    grid-template-columns: auto;
+}
+
+.bottom > div{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.login_text, .error{
+    font-size: 0.75vw;
+    text-align: center;
+}
+
+.link{
+    color: white;
+}
+
+.error{
+    color: rgb(255, 80, 80);
+}
+
+.submit{
+    text-align: left;
+    display: grid;
+    justify-content: center;
+}
+
+.submit_btn{
+    color: white;
+    border: 2px solid white;
+    height: 2.5vw;
+    width: 7em;
+    border-radius: 10px;
+    background-color: rgba(27, 28, 49, 0.001);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+
+.submit_btn:hover{
+    background-color: rgb(27, 28, 49);
+}
+
+.picture{
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+}
+
+.pass_top{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+}
+
+.pass_title{
+    float: left;
+}
+
+.show_con{
+    float: right;
+    text-align: right;
+}
+
+.show_button{
+    color: white;
+    background-color: rgba(27, 28, 49, 0.001);
+    outline: none;
+    border: 1px solid white;
+    font-size: 1vw;
+    margin-top: 0.15vw;
+    border-radius: 1vw;
+}
+
+.show_button:hover{
+    background-color: rgb(27, 28, 49);
+}
+
+.level_dropdown{
+    font-size: 1vw;
+    color: white;
+    border: 1px solid white;
+    background-color: rgb(27, 28, 49);
+}
+
+.login_text{
+    display: grid;
+    width: 100%;
+}

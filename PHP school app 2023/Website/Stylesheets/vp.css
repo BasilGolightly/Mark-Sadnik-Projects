@@ -1,0 +1,290 @@
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.content h1 {
+    font-size: 50px;
+}
+
+@keyframes change
+{ 
+    
+    0%
+    {
+    background-image: url(../Pictures/ozadje4.png);
+    }
+
+    25%
+    {
+    background-image: url(../Pictures/ozadje2.png);
+    }
+
+    50%
+    {
+    background-image: url(../Pictures/ozadje1.png);
+    }
+
+    75%
+    {
+    background-image: url(../Pictures/ozadje3.png);
+    }
+
+    100%
+    {
+        background-image: url(../Pictures/ozadje2.png);
+    }
+
+}
+
+#tekst {
+    font-size: 30px;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    width: 310px;
+    letter-spacing: 5px;
+    border-right: 5px solid;
+  
+    animation: 
+        typing 2s steps(14),
+        cursor .6s step-end infinite alternate;
+}
+
+@keyframes cursor {     /* TUKI JE ZATO DA SE ONA CRTICA NA KONCU BLNKA (zdelo se mi je zelo kul) */
+    
+    50% { border-color: transparent; }
+    
+}
+
+@keyframes typing {
+    from { width: 0; }
+}
+
+.bannerVP {                           /* TOLE JE ZA VAŠ PROFIL SITE */
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Pictures/ozadje1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.contentVP {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    color: white;
+    font-size: 35px;
+    border: solid 3px #fff;
+    margin:0 auto;
+    border-radius: 13px;
+    border-top: 15px;
+    border-bottom: 15px;
+    backdrop-filter: blur(8px);
+    padding: 10px;
+}
+
+.user_title{
+    display: flex;
+    flex-direction: row;   
+    justify-content: center; 
+}
+
+.user_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.title{
+    font-weight: bold;
+}
+
+.user_info > div{
+    font-size: 1.1vw;
+    padding: 0.3vw;
+    margin: 0.2vw 0.3vw; 
+}
+
+.password, .identity{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.about{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.teacher{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.list_prof{
+    justify-content: center;
+    list-style-type: none;
+    font-size: 0.9vw;
+    text-align: center;
+}
+
+.left{
+    text-align: right;
+}
+
+.right{
+    text-align: left;
+    margin-left: 0.3vw;
+}
+
+.input_field{
+    background-color: rgba(44,53,62,0);
+    border: none;
+    font-size: 1vw;
+}
+
+.normal_field{
+    width: 20ch;
+    outline: none;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+.user_name{
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+textarea{
+    width: 50ch;
+    /*height: 15ch;*/
+    resize: none;
+    padding: 0.25vw;
+    margin: 0.25vw;
+    text-align: center;
+    color: rgb(228, 228, 228);
+    font-style: italic;
+}
+
+.role_vp{
+    font-size: 1vw;
+    font-style: italic;
+}
+
+.vp_pfp{
+    width: 4vw;
+    height: 4vw;
+    object-fit: cover;
+    border-radius: 5vw;
+    border: 2px solid white;
+}
+
+.user_name_wrap{
+    display: grid;
+    text-align: left;
+    grid-template-rows: 50% 50%;
+    padding: 0 10px;
+}
+
+.user_name_wrap > div{
+    margin: 0.25vw 0;
+}
+
+.show_button{
+    border-radius: 2vw;
+    font-size: 0.9vw;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid white;
+    padding: 0.25em;
+    color: white;
+}
+
+.submit_btn{
+    border-radius: 2vw;
+    font-size: 1vw;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid white;
+    padding: 0.35em;
+    color: white;
+}
+
+.submit_btn:hover{
+    background-color: rgba(45,54,64,0.5);
+}
+
+.error{
+    color: lightblue;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9vw;
+    margin: 1vw 0;
+    font-weight: bold;
+}
+
+.identity > div{
+    margin: 0 0.25vw;
+}
+
+.name_inner{
+    font-size: 1.05vw;
+    padding-top: 0.1vw;
+}
+
+.file_upload{
+    text-align: center;
+    display: grid;
+    justify-content: center;
+}
+
+.file_upload::file-selector-button{
+    color: rgba(25,26,47,0);
+    background-color: rgba(25,26,47,0);
+    background-image: url("../Pictures/camera_icon.png");
+    background-size: cover;
+    height: 3vw;
+    width: 3vw;
+    outline: none;
+    border: 0.1vw solid white;
+    border-radius: 1vw;
+    font-size: 0.75vw;
+}
+
+.file_upload::file-selector-button:hover{
+    background-color: rgb(25,26,47);
+    border: 0.2vw solid white;
+}
+
+.pfp{
+    text-align: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+
+/*
+.edit{
+    width: 29px;
+    height: 29px;
+    transition: all 500ms;
+}
+
+.edit:hover{
+    transform: scale(1.5);
+}
+*/
+
