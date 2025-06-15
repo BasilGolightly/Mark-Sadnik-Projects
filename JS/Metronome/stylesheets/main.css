@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rochester&display=swap');
+
+/*
+COLOR PALETTE:
+
+eaf2e3
+61e8e1
+f25757
+F2E863
+f2cd60
+
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: grid;
+    width: 100vw;
+    height: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav{
+    font-size: 30px;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 100%;
+    justify-content: center;
+    text-align: center;
+    position: sticky;
+    float: top;
+    height: 50px;
+    background-color: #61e8e1;
+    color: black;
+    padding: 10px 0;
+}
+
+.nav div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mid{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    /*grid-template-columns: 100%;
+    grid-template-rows: auto;*/
+    width: 100vw;
+    background-color: #eaf2e3;
+    justify-content: center;
+}
+
+.mid > div{
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+
+.metronomeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+}
+
+.meterWrap{
+    display: grid;
+    width: 100%;
+    grid-template-rows: 100%;
+    grid-template-columns: auto auto;
+}
+
+.timeSigWrap{
+    font-family: "Rochester", cursive;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    font-size: 35px;
+    margin-right: 20px;
+}
+
+.timeSigWrap select{
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    font-family: "Rochester", cursive;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    font-size: 35px;
+    padding: 0;
+    margin: 0;
+}
+
+.timeDivider{
+    background-color: black;
+    color: black;
+    border: 0;
+    height: 3px;
+    width: 100%;
+}
+
+.bpmWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: 100%;
+}
+
+.bpmWrap input{
+    border: 0;
+    border-bottom: 3px solid black;
+    outline: none;
+    text-align: center;
+    width: auto;
+    font-family: "Rochester", cursive;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    font-size: 35px;
+}
+
+/*
+.bpmWrap input:focus{
+    border-bottom: 4px solid black;
+}
+
+.bpmWrap input:hover{
+    border-bottom: 4px solid black;
+}
+*/
+
+.startWrap{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.startWrap button{
+    margin: auto 10px;
+}
+
+.startBtn{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #61e8e1;
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.stopBtn{
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #f25757;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.displayWrap{
+    display: grid;
+    justify-content: center;
+}
+
+table{
+    border: 0;
+}
+
+tr, td{
+    border: 0;
+}
+
+td{
+    width: 3vw;
+    height: 3vw;
+    margin: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+td img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+td :hover{
+    border-bottom: 2px solid red;
+}
