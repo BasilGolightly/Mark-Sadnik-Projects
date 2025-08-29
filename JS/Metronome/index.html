@@ -11,7 +11,7 @@
     <div class="main">
         <div class="nav">
             <div class="navLeft">
-                <img src="media/helpIcon.png" width="30" height="30">
+                <button type="button" class="helpBtn" id="helpBtn"></button>
             </div>
 
             <div class="navMid">
@@ -86,12 +86,78 @@
             </div>
         </div>
 
-        <div class="footer">
+        <div class="footer" id="footer">
+            <div>
+                <h1>About this app</h2>
+            </div>
+            <div>
+                <p>This is a simple metronome app, using plain Javascript, HTML, and CSS.</p>
+            </div>
+            <div>
+                <h3>How to use?</h3>
+                <p>
+                    On the left you have two dropdown lists, seperated by a line. This is the time signature, i. e. how many beats there are in a bar.
+                    <br>
+                    For example - the most common is <b>4 over 4</b> or <b>4/4</b>, which means there are 4 quarter notes in a bar of time. It is counted from 1 to 4 and then repeats after 4 pulses.
+                    <br>
+                    Another common time signature is <b>3/4</b>, commonly used in waltzes, with three beats in a bar instead of four. 
+                    <br>
+                    This means the top number dictates how many pulses there are in a bar of time. In this case the choice ranges from 1 to 16 notes per bar.
+                </p>
 
+                <button type="button" class="dropDownBtn" id="dropBtn1">Note values...</button>
+                <div class="dropContainer" id="dropContainer1">
+                    <p>
+                        Now, the bottom number dictates the <b>note value</b>, i. e. a <b>quarter note, eighth note, or sixteenth note</b>.
+                        <br>
+                        To explain what each note value incites, let's say we are playing at <b>120 BPM</b> or <b>B</b>eats <b>P</b>er <b>M</b>inute:
+                        <ul>
+                            <li>
+                                <b>Quarter note (4)</b> - at this tempo, there would be <b>120</b> quarter notes per minute, 
+                                <br>or if we are playing in <b>4/4</b> we would count through <b>30</b> bars of time (1-2-3-4).
+                                <br>Therefore, we could call quarter notes the base pulse.
+                            </li>
+                            <br>
+                            <li>
+                                <b>Eighth note (8)</b> - the eighth notes are, as the name implies, <b>half the duration of a quarter note</b>. 
+                                <br>This means that there would be <b>240</b> eighth notes per minute at a tempo of 120 BPM.
+                                <br>They are usually counted as &QUOT;<b>1-and-2-and-3-and-4-and</b>&QUOT;, though sometimes also from 1 to 8 in a choreography or dancing context,
+                                <br>and rarely in a musical or orchestral context.
+                            </li>
+                            <br>
+                            <li>
+                                <b>Sixteenth note (16)</b> - sixteenth notes last <b>half the duration of an eighth note</b>, or a <b>quarter of the duration of a quarter note</b>.
+                                <br>So there would be <b>480</b> sixteenth notes per minute at a tempo of 120 BPM. BPM is also commonly refferred to as &QUOT;<b>quarter note equals [insert tempo]</b>&QUOT;
+                                <br>Usually they are counted as &QUOT;<b>1-e-and-a-2-e-and-a-3-e-and-a-4-e-and-a</b>&QUOT;, and almost never from 1 to 16.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                
+
+                <button type="button" class="dropDownBtn" id="dropBtn2">Accents...</button>
+                <div class="dropContainer" id="dropContainer2">
+                    <p>
+                        When you select your desired time signature, a bar of notes will pop up.
+                        <br>
+                        This bar will have the exact number of notes, and the exact note values that you selected.
+                        <br>
+                        By default the first note of the bar will be pre-selected to make a distinctive sound that differs from the others.
+                        <br>
+                        <ul>
+                            <li>
+                                This is called <b>an &QUOT;accent&QUOT;</b>. It can be understood as an exclamation mark to signify a specific point in the bar.
+                                <br>
+                                <b>To make a certain note accented, simply click on it</b>, and it will be underlined to that it is accented. Click on it again to <b>remove the accent</b>. 
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
-
-<script src="scripts/script.js"></script>
-
 </html>
+
+<script src="scripts/help.js" defer></script>
+<script src="scripts/script.js" defer></script>

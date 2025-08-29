@@ -1,13 +1,12 @@
 // variables for storing time signature and bpm
 let beatsPerBar = 4, noteValue = 4, bpm = 120, intervalMs = (60 / bpm) * 1000, currentBeat = 1;
 let timer = setInterval(()=>{}, 1000);
+
 clearInterval(timer);
 
 // audio objects for clicks
 const audioRegular = new Audio("../media/regular.mp3");
 const audioAccent = new Audio("../media/accent.mp3");
-
-
 
 function start(){
     changeTimeSignature();
@@ -51,24 +50,33 @@ async function changeTimeSignature(){
 
     for(let i = 1; i <= beatsPerBar; i++){
         document.getElementById("noteImgArea").innerHTML += "<td id='note" + i + "' onclick='markAccent(" + i + ")'><img src='" + noteImgPath + "'></td>";
-        document.getElementById("noteNumArea").innerHTML += "<td id='noteNum" + i + "' onclick='markAccent(" + i + ")>" + i + "</td>";
-        
+        document.getElementById("noteNumArea").innerHTML += "<td id='noteNum" + i + "' onclick='markAccent(" + i + ")'>" + i + "</td>";
+        let currNote = document.getElementById('note' + i);
+        let currNoteNum = document.getElementById('noteNum' + i);
+        currNote.style.borderBottom = "none";
+        currNoteNum.style.fontWeight = "normal";
     }
 
-    for(let i = 1; i < beatsPerBar; i++){
-        document.getElementById('note' + i).style.borderBottom = "none";
-        document.getElementById('note' + i).class = "";
-        document.getElementById('noteNum' + i).style.fontWeight = "normal";
-        document.getElementById('noteNum' + i).class = "";
-    }
-
-    
     markAccent(1);
 }
 
 function markAccent(noteId){
-    document.getElementById('note' + noteId).class = "accentNote";
-    document.getElementById('noteNum' + noteId).class = "accentNum";
+    console.log(noteId);
+    if(document.getElementById('note' + noteId).className == ""){
+        document.getElementById('note' + noteId).className = "accentNote";
+        document.getElementById('noteNum' + noteId).className = "accentNum";
+        return;
+    }
+    
+    document.getElementById('note' + noteId).className = "";
+    document.getElementById('noteNum' + noteId).className = "";
+}
+
+function checkInput(){
+    if(document.getElementById('bpm').value <= 40){
+        alert("Please enter a value between 40 and 250 BPM!");
+        document.getElementById('bpm').value = 120;
+    }
 }
 
 document.getElementById('beatsPerBar').addEventListener("select", changeTimeSignature);
@@ -76,4 +84,9 @@ document.getElementById('noteValue').addEventListener("select", changeTimeSignat
 document.getElementById('startBtn').addEventListener("click", start);
 document.getElementById('stopBtn').addEventListener("click", stop);
 document.getElementById('bpm').addEventListener("input", stop);
+document.getElementById('bpm').addEventListener("blur", checkInput);
+
+
+
+
 
