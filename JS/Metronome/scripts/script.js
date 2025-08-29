@@ -7,23 +7,33 @@ clearInterval(timer);
 const audioRegular = new Audio("../media/regular.mp3");
 const audioAccent = new Audio("../media/accent.mp3");
 
-function tick(){
-    
-    currentBeat++;
-}
+
 
 function start(){
+    changeTimeSignature();
+    intervalMs = ((60 / bpm) * 1000) / (noteValue / 4);
     timer = setInterval(tick, intervalMs);
+    document.getElementById("startBtn").enabled = false;
+    document.getElementById("stopBtn").enabled = true;
 }
 
 function stop(){
-    //clearInterval(timer);
-    reset();
+    currentBeat = 1;
+    clearInterval(timer);
+    document.getElementById("stopBtn").enabled = false;
+    document.getElementById("startBtn").enabled = true;
 }
 
-function changeTimeSignature(){
-    //stop();
-    
+function tick(){
+    let prev = (currentBeat-1)%beatsPerBar;
+    document.getElementById('note' + prev).style.borderBottom = "none";
+    document.getElementById('note' + currentBeat).style.borderBottom = "2px solid black";
+
+    currentBeat++;
+}
+
+async function changeTimeSignature(){    
+    stop();
     beatsPerBar = document.getElementById('beatsPerBar').value;
     noteValue = document.getElementById('noteValue').value;
     bpm = document.getElementById('bpm').value;
@@ -32,34 +42,38 @@ function changeTimeSignature(){
     document.getElementById("noteNumArea").innerHTML = "";
 
     let noteImgPath = "media/";
+    // quarter notes
     if(noteValue == 4) noteImgPath += "qNote.png";
+    // eighth notes
     else if(noteValue == 8) noteImgPath += "eNote.png";
+    // sixteenth notes
     else noteImgPath += "sNote.webp"; 
 
     for(let i = 1; i <= beatsPerBar; i++){
-        document.getElementById("noteImgArea").innerHTML += "<td id='note" + i + "'><img src='" + noteImgPath + "'></td>";
-        document.getElementById("noteNumArea").innerHTML += "<td id='noteNum" + i + "'>" + i + "</td>";
+        document.getElementById("noteImgArea").innerHTML += "<td id='note" + i + "' onclick='markAccent(" + i + ")'><img src='" + noteImgPath + "'></td>";
+        document.getElementById("noteNumArea").innerHTML += "<td id='noteNum" + i + "' onclick='markAccent(" + i + ")>" + i + "</td>";
+        
     }
+
+    for(let i = 1; i < beatsPerBar; i++){
+        document.getElementById('note' + i).style.borderBottom = "none";
+        document.getElementById('note' + i).class = "";
+        document.getElementById('noteNum' + i).style.fontWeight = "normal";
+        document.getElementById('noteNum' + i).class = "";
+    }
+
+    
+    markAccent(1);
 }
 
-function changeTempo(){
-
+function markAccent(noteId){
+    document.getElementById('note' + noteId).class = "accentNote";
+    document.getElementById('noteNum' + noteId).class = "accentNum";
 }
-
-function reset(){
-    currentBeat = 1;
-    changeTimeSignature();
-    currentBeat();
-}
-
-function markAccent(){
-    this.name = "accent";
-}
-
-
 
 document.getElementById('beatsPerBar').addEventListener("select", changeTimeSignature);
 document.getElementById('noteValue').addEventListener("select", changeTimeSignature);
 document.getElementById('startBtn').addEventListener("click", start);
+document.getElementById('stopBtn').addEventListener("click", stop);
 document.getElementById('bpm').addEventListener("input", stop);
-document.getElementById('bpm').addEventListener("blur", changeTempo);
+
