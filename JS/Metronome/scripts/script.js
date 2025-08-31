@@ -25,26 +25,34 @@ function stop(){
 }
 
 async function tick(){
+
     document.getElementById('note' + currentBeat).style.borderBottom = "2px solid black";
     document.getElementById('noteNum' + currentBeat).style.fontWeight = "bold";
     
     // accent note
     if(accented[(currentBeat-1)] === true){
+        audioAccent.currentTime = 0;
         audioAccent.play();
     }
 
     audioRegular.currentTime = 0;
     audioRegular.play();
 
-    // end of bar
-    if(currentBeat == beatsPerBar) {
-        for(let i = 1; i <= beatsPerBar; i++){
+    // first note - reset last note
+    if(currentBeat == 1){
+        document.getElementById('note' + beatsPerBar).style.borderBottom = "none";
+        document.getElementById('noteNum' + beatsPerBar).style.fontWeight = "";
+    }
+    // end of bar - reset all other notes
+    else if(currentBeat == beatsPerBar) {
+        for(let i = 1; i <= (beatsPerBar-1); i++){
             document.getElementById('note' + i).style.borderBottom = "none";
-            document.getElementById('noteNum' + currentBeat).style.fontWeight = "";
+            document.getElementById('noteNum' + i).style.fontWeight = "";
         }
         currentBeat = 1;
         return;
     }
+    
     currentBeat++;
 }
 
