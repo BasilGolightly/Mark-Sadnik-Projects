@@ -25,19 +25,18 @@ function stop(){
 }
 
 async function tick(){
-
+    audioRegular.currentTime = 0;
     // accent note
     if(accented[(currentBeat-1)] === true){
-        await audioAccent.play();
+        audioAccent.play();
     }
-    // non-accented note
-    else{
-        document.getElementById('note' + currentBeat).style.borderBottom = "2px solid black";
-        await audioRegular.play();
-        document.getElementById('note' + currentBeat).style.borderBottom = "none";
-    }
-    
 
+    document.getElementById('note' + currentBeat).style.borderBottom = "2px solid black";
+    audioRegular.play();
+    if(currentBeat == beatsPerBar) {
+        currentBeat = 1;
+        return;
+    }
     currentBeat++;
 }
 
