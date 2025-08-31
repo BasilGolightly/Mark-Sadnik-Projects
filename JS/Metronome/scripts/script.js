@@ -25,22 +25,30 @@ function stop(){
 }
 
 async function tick(){
-    audioRegular.currentTime = 0;
+    document.getElementById('note' + currentBeat).style.borderBottom = "2px solid black";
+    document.getElementById('noteNum' + currentBeat).style.fontWeight = "bold";
+    
     // accent note
     if(accented[(currentBeat-1)] === true){
         audioAccent.play();
     }
 
-    document.getElementById('note' + currentBeat).style.borderBottom = "2px solid black";
+    audioRegular.currentTime = 0;
     audioRegular.play();
+
+    // end of bar
     if(currentBeat == beatsPerBar) {
+        for(let i = 1; i <= beatsPerBar; i++){
+            document.getElementById('note' + i).style.borderBottom = "none";
+            document.getElementById('noteNum' + currentBeat).style.fontWeight = "";
+        }
         currentBeat = 1;
         return;
     }
     currentBeat++;
 }
 
-async function changeTimeSignature(){    
+function changeTimeSignature(){    
     stop();
     beatsPerBar = document.getElementById('beatsPerBar').value;
     noteValue = document.getElementById('noteValue').value;
@@ -80,7 +88,8 @@ function markAccent(noteId){
     //non-accented
     if(accented[(noteId-1)] === false){
         document.getElementById('note' + noteId).className = "accentNote";
-        document.getElementById('noteNum' + noteId).className = "accentNum";
+        document.getElementById('noteNum' + noteId).style.fontWeight = "bold";
+        document.getElementById('noteNum' + noteId).style.fontStyle = "italic";
     }
     
     //accented
@@ -106,7 +115,5 @@ document.getElementById('stopBtn').addEventListener("click", stop);
 document.getElementById('bpm').addEventListener("input", stop);
 document.getElementById('bpm').addEventListener("blur", checkInput);
 
-
-
-
+changeTimeSignature();
 
