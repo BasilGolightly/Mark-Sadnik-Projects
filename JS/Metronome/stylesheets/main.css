@@ -257,7 +257,7 @@ td :hover{
 .footer{
     display: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     text-align: center;
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
@@ -295,6 +295,10 @@ ul{
     border-bottom: 2px solid black;
 }
 
+
+.dropContainer{
+    display: none;
+}
 
 
 
