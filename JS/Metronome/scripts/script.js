@@ -1,5 +1,6 @@
 // variables for storing time signature and bpm
 let beatsPerBar = 4, noteValue = 4, bpm = 120, intervalMs = (60 / bpm) * 1000, currentBeat = 1;
+let seqCounting = false;
 let timer = setInterval(()=>{}, 1000);
 let accented = [];
 
@@ -10,21 +11,23 @@ const audioRegular = new Audio("../media/regular.mp3");
 const audioAccent = new Audio("../media/accent.mp3");
 
 function start(){
-    changeTimeSignature();
     intervalMs = ((60 / bpm) * 1000) / (noteValue / 4);
     timer = setInterval(tick, intervalMs);
-    document.getElementById("startBtn").enabled = false;
-    document.getElementById("stopBtn").enabled = true;
+    document.getElementById("startBtn").disabled = true;
+    document.getElementById("stopBtn").disabled = false;
 }
 
 function stop(){
     currentBeat = 1;
     clearInterval(timer);
-    document.getElementById("stopBtn").enabled = false;
-    document.getElementById("startBtn").enabled = true;
+    document.getElementById("stopBtn").disabled = true;
+    document.getElementById("startBtn").disabled = false;
 }
 
 async function tick(){
+    const beats = Number(beatsPerBar);
+    let prevBeat = ((beats+(currentBeat-2)) % beats) + 1;
+    console.log(prevBeat);
 
     document.getElementById('note' + currentBeat).style.borderBottom = "2px solid black";
     document.getElementById('noteNum' + currentBeat).style.fontWeight = "bold";
@@ -38,22 +41,34 @@ async function tick(){
     audioRegular.currentTime = 0;
     audioRegular.play();
 
-    // first note - reset last note
-    if(currentBeat == 1){
-        document.getElementById('note' + beatsPerBar).style.borderBottom = "none";
-        document.getElementById('noteNum' + beatsPerBar).style.fontWeight = "";
-    }
-    // end of bar - reset all other notes
-    else if(currentBeat == beatsPerBar) {
-        for(let i = 1; i <= (beatsPerBar-1); i++){
-            document.getElementById('note' + i).style.borderBottom = "none";
-            document.getElementById('noteNum' + i).style.fontWeight = "";
-        }
+    document.getElementById('note' + prevBeat).style.borderBottom = "none";
+    document.getElementById('noteNum' + prevBeat).style.fontWeight = "";
+
+    // end of bar - reset to count 1
+    if(currentBeat == beatsPerBar) {
         currentBeat = 1;
         return;
     }
     
     currentBeat++;
+}
+
+function changeCountingStyle(){
+    // if the notes are quarter notes, it doesn't make a difference
+    if(noteValue == 4){
+        seqCounting = true;
+    }
+
+    // sequential counting mode - [1, beats per bar]
+    if(seqCounting){
+        
+        return;
+    }
+    else{
+        
+    }
+
+    seqCounting = !seqCounting;
 }
 
 function changeTimeSignature(){    
@@ -77,14 +92,6 @@ function changeTimeSignature(){
     for(let i = 1; i <= beatsPerBar; i++){
         document.getElementById("noteImgArea").innerHTML += "<td id='note" + i + "' onclick='markAccent(" + i + ")'><img src='" + noteImgPath + "'></td>";
         document.getElementById("noteNumArea").innerHTML += "<td id='noteNum" + i + "' onclick='markAccent(" + i + ")'>" + i + "</td>";
-        document.getElementById('note' + i).addEventListener("click", () => markAccent(i));
-        document.getElementById('noteNum' + i).addEventListener("click", () => markAccent(i));
-        /*
-        let currNote = document.getElementById('note' + i);
-        let currNoteNum = document.getElementById('noteNum' + i);
-        currNote.style.borderBottom = "none";
-        currNoteNum.style.fontWeight = "normal";
-        */
         accented[(i-1)] = false;
     }
 
@@ -122,6 +129,7 @@ document.getElementById('startBtn').addEventListener("click", start);
 document.getElementById('stopBtn').addEventListener("click", stop);
 document.getElementById('bpm').addEventListener("input", stop);
 document.getElementById('bpm').addEventListener("blur", checkInput);
+document.getElementById('countingStyle').addEventListener("change", changeCountingStyle);
 
 changeTimeSignature();
 

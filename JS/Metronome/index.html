@@ -19,7 +19,15 @@
             </div>
 
             <div class="navRight">
-
+                <div>
+                    Counting style:
+                </div>
+                <div>
+                    <select name="countingStyle" id="countingStyle" class="countingDropdown">
+                        <option value="quarter">Quarter notes</option>
+                        <option value="seq">Sequential</option>
+                    </select>
+                </div>
             </div>
         </div>
 
@@ -29,7 +37,7 @@
                     <div class="meterWrap">
                         <div class="timeSigWrap">
                             <div class="beatsWrap">
-                                <select name="beatsPerBar" id="beatsPerBar" oninput="changeTimeSignature()">
+                                <select name="beatsPerBar" id="beatsPerBar">
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4" selected>4</option>
@@ -52,7 +60,7 @@
                             </div>
                             <hr class="timeDivider">
                             <div class="noteWrap">
-                                <select name="noteValue" id="noteValue" oninput="changeTimeSignature()">
+                                <select name="noteValue" id="noteValue">
                                     <option value="4" selected>4</option>
                                     <option value="8">8</option>
                                     <option value="16">16</option>
@@ -65,7 +73,7 @@
                             </div>
                             <div class="startWrap">
                                 <button type="button" class="startBtn" id="startBtn">START</button>
-                                <button type="button" class="stopBtn" id="stopBtn">STOP</button>
+                                <button type="button" class="stopBtn" id="stopBtn" disabled>STOP</button>
                             </div>
                         </div>
                     </div>    

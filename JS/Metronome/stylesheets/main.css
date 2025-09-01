@@ -50,11 +50,27 @@ body{
     text-align: left;
 }
 
-.nav div{
+.navLeft, .navMid{
     padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.navRight{
+    display: flex;
+    float: right;
+    text-align: right;
+    justify-content: right;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+.navRight div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
 }
 
 .mid{
@@ -145,16 +161,6 @@ body{
     text-align: center;
     font-size: 35px;
 }
-
-/*
-.bpmWrap input:focus{
-    border-bottom: 4px solid black;
-}
-
-.bpmWrap input:hover{
-    border-bottom: 4px solid black;
-}
-*/
 
 .startWrap{
     display: flex;
@@ -263,12 +269,6 @@ td :hover{
     grid-template-rows: auto auto;
     width: 100%;
     background-color: #fdf6b8;
-    /*
-    background-image: url("../media/musicPattern.jpg");
-    background-repeat: repeat repeat;
-    background-size: contain;
-    backdrop-filter: blur(2px);
-    */
 }
 
 ul{
