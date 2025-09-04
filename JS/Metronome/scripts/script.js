@@ -1,6 +1,5 @@
 // variables for storing time signature and bpm
 let beatsPerBar = 4, noteValue = 4, bpm = 120, intervalMs = (60 / bpm) * 1000, currentBeat = 1;
-let seqCounting = false;
 let timer = setInterval(()=>{}, 1000);
 let accented = [];
 
@@ -54,21 +53,33 @@ async function tick(){
 }
 
 function changeCountingStyle(){
-    // if the notes are quarter notes, it doesn't make a difference
-    if(noteValue == 4){
-        seqCounting = true;
+    // quarter notes
+    if(document.getElementById('countingStyle').value == "quarter"){
+        if(noteValue == 8){
+            for(let i = 1, j = 1; i <= beatsPerBar; i++){
+                if(i % 2 === 0){
+                    document.getElementById('noteNum' + i).innerHTML = "+";
+                    j++;
+                }
+                else{
+                    document.getElementById('noteNum' + i).innerHTML = j;
+                }
+            }
+            return;
+        }
+        else if(noteValue == 16){
+            for(let i = 1, j = 1; i < beatsPerBar; i++){
+                
+            }
+            return;
+        }
     }
-
-    // sequential counting mode - [1, beats per bar]
-    if(seqCounting){
-        
-        return;
-    }
+    // sequential [1, beats per bar]
     else{
-        
+        for(let i = 1; i <= beatsPerBar; i++){
+            document.getElementById('noteNum' + i).innerHTML = i;
+        }
     }
-
-    seqCounting = !seqCounting;
 }
 
 function changeTimeSignature(){    
@@ -97,6 +108,7 @@ function changeTimeSignature(){
 
     // accent first note
     markAccent(1);
+    changeCountingStyle();
 }
 
 function markAccent(noteId){
