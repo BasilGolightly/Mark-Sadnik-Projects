@@ -26,7 +26,7 @@ function stop(){
 async function tick(){
     const beats = Number(beatsPerBar);
     let prevBeat = ((beats+(currentBeat-2)) % beats) + 1;
-    console.log(prevBeat);
+    //console.log(prevBeat);
 
     document.getElementById('note' + currentBeat).style.borderBottom = "2px solid black";
     document.getElementById('noteNum' + currentBeat).style.fontWeight = "bold";
@@ -36,10 +36,12 @@ async function tick(){
         audioAccent.currentTime = 0;
         audioAccent.play();
     }
-
-    audioRegular.currentTime = 0;
-    audioRegular.play();
-
+    // non-accented note
+    else{
+        audioRegular.currentTime = 0;
+        audioRegular.play();
+    }
+    
     document.getElementById('note' + prevBeat).style.borderBottom = "none";
     document.getElementById('noteNum' + prevBeat).style.fontWeight = "";
 
@@ -68,17 +70,34 @@ function changeCountingStyle(){
             return;
         }
         else if(noteValue == 16){
-            for(let i = 1, j = 1; i < beatsPerBar; i++){
-                
+            for(let i = 1, j = 1, k = 1; i <= beatsPerBar; i++){
+                // 4th 16th
+                if(k % 4 === 0){
+                    document.getElementById('noteNum' + i).innerHTML = "a";
+                    j++;
+                    k = 1;
+                    continue;
+                }
+                // 3rd 16th
+                else if(k % 3 === 0){
+                    document.getElementById('noteNum' + i).innerHTML = "&";
+                }
+                // 2nd 16th
+                else if(k % 2 === 0){
+                    document.getElementById('noteNum' + i).innerHTML = "e";
+                }
+                // 1st 16th
+                else{
+                    document.getElementById('noteNum' + i).innerHTML = j;
+                }
+                k++;
             }
             return;
         }
     }
-    // sequential [1, beats per bar]
-    else{
-        for(let i = 1; i <= beatsPerBar; i++){
-            document.getElementById('noteNum' + i).innerHTML = i;
-        }
+    // sequential / quarters [1, beats per bar]
+    for(let i = 1; i <= beatsPerBar; i++){
+        document.getElementById('noteNum' + i).innerHTML = i;
     }
 }
 
@@ -133,6 +152,7 @@ function checkInput(){
         alert("Please enter a value between 40 and 250 BPM!");
         document.getElementById('bpm').value = 120;
     }
+    changeTimeSignature();
 }
 
 document.getElementById('beatsPerBar').addEventListener("change", changeTimeSignature);
