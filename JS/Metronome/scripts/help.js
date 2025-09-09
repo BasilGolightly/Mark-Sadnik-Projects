@@ -12,10 +12,7 @@ function showHelp(){
 }
 
 function dropArea(id){
-    //console.log(id);
     let name = 'dropContainer' + id;
-    //console.log(name);
-    //console.log(chapters[(id-1)]);
     if(chapters[(id-1)] === false){
         document.getElementById(name).style.display = 'block';
     }

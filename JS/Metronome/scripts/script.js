@@ -26,7 +26,6 @@ function stop(){
 async function tick(){
     const beats = Number(beatsPerBar);
     let prevBeat = ((beats+(currentBeat-2)) % beats) + 1;
-    //console.log(prevBeat);
 
     document.getElementById('note' + currentBeat).style.borderBottom = "2px solid black";
     document.getElementById('noteNum' + currentBeat).style.fontWeight = "bold";
